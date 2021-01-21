@@ -26,4 +26,10 @@ form.addEventListener('submit', function(e) {
     newToDo.innerText = input.value + " ";
     newToDo.appendChild(removeBtn);
     toDoList.appendChild(newToDo);
+    
+    localStorage.setItem('ToDos', toDoList.innerHTML);
 });
+const saved = localStorage.getItem('ToDos');
+if (saved) {
+    toDoList.innerHTML = saved;
+}
