@@ -36,10 +36,3 @@ localStorage.setItem("todo-list", JSON.stringify(array));
 
 let saved = JSON.parse(localStorage.getItem("todo-list")) || [];
 saved.forEach(addLi);
-
-function addLi(text) {
-    let ul = document.getElementById("todo-list");
-    let li = document.createElement("li");
-    li.appendChild(document.createTextNode(text));
-    ul.appendChild(li);
-}
