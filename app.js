@@ -26,10 +26,20 @@ form.addEventListener('submit', function(e) {
     newToDo.innerText = input.value + " ";
     newToDo.appendChild(removeBtn);
     toDoList.appendChild(newToDo);
-
-    localStorage.setItem('ToDos', toDoList.innerHTML);
 });
-let saved = localStorage.getItem('ToDos');
-if (saved) {
-    toDoList.innerHTML = saved;
+
+let items = document.querySelectorAll("#todo-list li");
+let array = Array.prototype.map.call(items, function(item) {
+    return item.textContent;
+});
+localStorage.setItem("todo-list", JSON.stringify(array));
+
+let saved = JSON.parse(localStorage.getItem("todo-list")) || [];
+saved.forEach(addLi);
+
+function addLi(text) {
+    let ul = document.getElementById("todo-list");
+    let li = document.createElement("li");
+    li.appendChild(document.createTextNode(text));
+    ul.appendChild(li);
 }
