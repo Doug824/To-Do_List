@@ -102,3 +102,34 @@ h1 {
 .checked { 
     text-decoration: line-through;
 }
+
+@media (max-width: 320px) {
+	.collection {
+		width: 85%;
+	}
+
+	.collection .card {
+		height: 4.7rem;
+		width: 4.7rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.container {
+		font-size: 22px;
+	}
+
+	.collection {
+		width: 660px;
+		height: 680px;
+	}
+
+	.collection .card {
+		height: 125px;
+		width: 125px;
+	}
+
+	.popup {
+		width: 60%;
+	}
+}
