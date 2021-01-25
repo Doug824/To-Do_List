@@ -3,31 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Plaster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <title>To-do List</title>
 </head>
 <body>
-    <h1 id="main-heading">To-do List</h1>
-    <h3>Single click = Completed but not deleted 
+
+    <div class="container">
         <br>
-        Double click = Marked as most important
-        <br>
-        To remove from to-do list click the [X]
-        <br>
-        </h3>
-        <br><hr><hr><br>
-    <form action="" id="add-item">
-        <label for ="item">New To-Do</label>
-        <input type="text" id="item">
-        <button>Add To-do</button>
+    <h1>To-do List</h1>
+
+    <form class="todo-form">
+        <input type="text" class="todo-input" placeholder="Add something To-do...">
+        <button type="submit" class="add-button">Add</button>
     </form>
-    <ul id="todo-list">
-        <li>Rake the Yard <button>X</button></li>
-        <li>Buy dog food <button>X</button></li>
-        <li>Complete Springboard's next Unit <button>X</button></li>
-        <li>Take a short break <button>X</button></li>
-        <li>Become a Software Engineer! <button>X</button></li>
+        <br>
+    <ul class="todo-items">
     </ul>
+    </div>
+
     <script src="app.js"></script>
 </body>
 </html>
